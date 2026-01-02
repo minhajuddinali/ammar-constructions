@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import {  Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 import Navbar from './components/Navbar';
@@ -42,7 +42,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   return (
-    <BrowserRouter>
+    <>
       <AnimatePresence>
         {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
       </AnimatePresence>
@@ -62,7 +62,7 @@ function App() {
           </Layout>
         </>
       )}
-    </BrowserRouter>
+    </>
   );
 }
 
